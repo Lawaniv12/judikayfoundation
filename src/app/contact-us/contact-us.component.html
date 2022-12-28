@@ -1,0 +1,49 @@
+<header>
+  <app-navbar>
+
+  </app-navbar>
+  <div class="md:h-[600px] w-full overflow-hidden">
+    <img src="assets/images/contact-us.png" alt="" class="w-full">
+  </div> 
+</header>
+
+
+<section class="font-nunito md:px-12 md:p-16 p-6 bg-[#F2D8C133] ">
+  <p class="text-[#d90069] md:text-4xl text-2xl mb-16 font-bold">CONTACT US</p>
+  
+  <div class="grid md:grid-cols-2 grid-cols-1 md:py-24 md:gap-6 gap-4 items-center">
+    <div class="md:text-lg font-semibold">
+      <p class="mb-4">
+        Please, make Tax-Deductible Donation or if you have any questions about our organization, please contact us at.
+
+      </p>
+      <p class="mb-4">
+        Judikay Foundation Inc
+      </p>
+      <p>
+       <span>Email</span>:judikayfoundation@gmail.com
+      </p>
+    </div>
+    <div class="md:p-8 p-4 bg-[#F2D8C1]">
+      <p class="mb-8 text-[#d90069] font-bold">SEND US A MESSAGE</p>
+      <form action="" class="flex flex-col ">
+        <div class="md:mb-7 mb-4">
+          <input type="text" placeholder="Name" class="w-full px-6 py-2 outline-none">
+        </div>
+        <div class="flex flex-col md:flex-row gap-4 md:mb-7 mb-4">
+          <input type="text" placeholder="Phone Number" class="md:w-[50%] w-full px-6 py-2 outline-none">
+          <input type="text" placeholder="Email" class="md:w-[50%] w-full px-6 py-2 outline-none">
+        </div>
+        <div class="md:mb-7 mb-4">
+          <textarea name="" id="" cols="30" rows="10" placeholder="Enter Your message" class="w-full px-6 py-4 outline-none"></textarea>
+        </div>
+        <div>
+          <app-button [buttonText]="'Submit'"></app-button>
+        </div>
+      </form>
+
+    </div>
+  </div>
+</section>
+
+<app-footer></app-footer>

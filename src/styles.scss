@@ -1,1 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import 'ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
+@import 'ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
+
+.font-worksans {
+  font-family: 'Work Sans', sans-serif;
+}
+
+.font-khula {
+  font-family: 'Khula', sans-serif;
+}
+
+.font-nunito{
+  font-family: 'Nunito', sans-serif;
+}
+
+.font-fira{
+  font-family: 'Fira', sans-serif;
+}
+

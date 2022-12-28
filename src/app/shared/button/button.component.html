@@ -1,0 +1,12 @@
+<button
+(click)="handleClick()"
+type="button"
+[disabled]="disabled"
+[ngClass]="[overRideButtonClass? getCustomClass: 'align-center items-center bg-[#009BE3] md:text-lg text-base md:px-6 md:py-4 px-3 py-2 text-white font-nunito rounded-lg hover:bg-[#0992d1]',
+disabled ? 'cursor-not-allowed': '',
+status == 'LOADING'? 'loading': '']">
+
+<ng-content #body></ng-content>
+<span class="flex items-center">{{buttonText}}</span>
+
+</button>

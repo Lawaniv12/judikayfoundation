@@ -1,1 +1,79 @@
-<p>home works!</p>
+<header>
+  <app-navbar></app-navbar>
+  <div class="grid md:grid-cols-2 grid-cols-1 items-center md:ml-12 gap-8">
+    <div class="md:text-7xl text-4xl font-khula font-bold md:p-12 text-center md:order-1 order-2 md:text-left">
+      The 
+     <span class="text-[#009BE3]">Gospel </span> <br>
+        Through Good  
+     <span class="text-[#D90069]"> Works</span>.
+    </div>
+    <div class="pr-0 md:order-2 order-1">
+      <img src="assets/images/heroImage.svg" alt="" class="hidden md:block">
+      <img src="assets/images/heroImgPhone.png" alt="" class="md:hidden w-full">
+    </div>
+  </div>
+</header>
+
+<section class="bg-[#F2D8C133] font-khula md:px-12 md:p-24 p-6 md:py-36 mt-16">
+  <div class="md:w-[50%] mx-auto text-center">
+    <h2 class="text-[#d90069] md:text-4xl text-2xl mb-8 font-bold">
+      Our Mission
+    </h2>
+    <p class="md:text-lg text-base">
+      Our mission is to mentor and provide guidiance to the youth. To improve the welfare of people to support orphans and the less privileged in the society. initiate programmes for the empowerment of when,youths,needy and orphans via skill acquisition and vocational training centers. 
+    </p>
+  </div>
+
+  
+</section>
+
+<section class="md:mt-24 p-6 md:py-36 mt-16">
+  <p class="text-[#d90069] md:text-4xl text-2xl mb-16 font-bold  md:w-[50%] w-[80%] mx-auto text-center">Our Gallery</p>
+  <owl-carousel-o [options]="gallery" class="mt-4">
+    <ng-template carouselSlide><img src="assets/images/galleryOne.png" alt="" class="px-1"></ng-template>  
+    <ng-template carouselSlide><img src="assets/images/galleryTwo.png" alt="" class="px-1"></ng-template>  
+    <ng-template carouselSlide><img src="assets/images/galleryOne.png" alt="" class="px-1"></ng-template>
+    <ng-template carouselSlide><img src="assets/images/galleryTwo.png" alt="" class="px-1"></ng-template>   
+  </owl-carousel-o>
+  <div class="text-[#009BE3] flex gap-[20px] hover:gap-[30px] cursor-pointer ease-in duration-300 items-center mt-8 mx-auto w-fit" routerLink="/outreach"> 
+   <p class="font-bold text-lg">See More</p>  
+    <span class="">
+      <img src="assets/images/seeMore.svg" alt="">
+    </span>
+  </div>
+</section>
+
+<section class="bg-[#F2D8C133] font-khula md:px-12 md:p-24 p-6 md:py-36 mt-16">
+  <p class="text-[#d90069] md:text-4xl text-2xl md:mb-16 mb-6 mt-12 font-bold  md:w-[50%] w-[100%] mx-auto text-center">Testimonials</p>
+  <owl-carousel-o [options]="testimonials" class="mt-4">
+    <ng-container *ngFor="let testimony of testimonies">
+      <ng-template carouselSlide [id]="testimony.id">
+        <div class="bg-[#F2D8C133] rounded-md shadow-md md:mx-12 mx-3 max-h-[240px] lg:p-12 md:p-6 p-4 flex flex-col">
+          <p class="text-lg lg:w-[80%]">{{testimony.testament}}</p>
+          <p class="font-bold mt-8 ">{{testimony.testifierName}}</p>
+        </div>
+      </ng-template>
+    </ng-container> 
+     
+  </owl-carousel-o>
+</section>
+  <section class="bg-[#F2D8C133] font-khula md:px-12 md:p-24 p-6 md:pb-36 relative overflow-hidden">
+    <div class="md:w-[50%] w-[100%] mx-auto text-center">
+      <p class="text-[#d90069] md:text-4xl text-2xl md:mb-16 mb-6 font-bold mt-12">Subscribe to our Newsletter</p>
+  
+      <form [formGroup]="subscribeForm">
+        <input type="text" formControlName="fullName" placeholder="Enter Full Name" class="outline-0 border-2 px-8 py-4 bg-transparent w-full mb-8">
+        <input type="text" formControlName="email" placeholder="Enter Email Address" class="outline-0 border-2 px-8 py-4 mb-8 bg-transparent w-full">
+        <div class="z-1000">
+          <app-button [buttonText]="'Subscribe'"  (buttonClick)="subscribe()" [disabled]="!subscribeForm.valid"></app-button>
+        </div>
+      </form>
+      
+      
+    </div>
+    <img src="assets/images/subscribe-rectangle.png" alt="" class="absolute top-0 left-0 hidden z-[-10] md:block">
+  </section>
+
+<section class="">
+  <app-footer></app-footer>
+</section>

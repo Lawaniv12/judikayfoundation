@@ -1,0 +1,19 @@
+<header>
+  <app-navbar>
+  </app-navbar>
+</header>
+
+
+<section class="md:mt-24 p-6 md:py-36 mt-16">
+  <p class="text-[#d90069] md:text-4xl text-2xl mb-16 font-bold  md:w-[50%] w-[80%] mx-auto text-center">Our Gallery</p>
+  <owl-carousel-o [options]="gallery" class="mt-4">
+    <ng-template carouselSlide><img src="assets/images/galleryOne.png" alt="" class="px-1"></ng-template>  
+    <ng-template carouselSlide><img src="assets/images/galleryTwo.png" alt="" class="px-1"></ng-template>  
+    <ng-template carouselSlide><img src="assets/images/galleryOne.png" alt="" class="px-1"></ng-template>
+    <ng-template carouselSlide><img src="assets/images/galleryTwo.png" alt="" class="px-1"></ng-template>   
+  </owl-carousel-o>
+</section>
+
+<app-footer>
+  
+</app-footer>
